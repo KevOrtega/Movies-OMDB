@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>OMDB</title>
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Sen&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/7f24a37400.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="styles/index.css">
+    </head>
+    <body>
+    <div class="loading-container" id="loading-container">
+        <div class="loading"></div>
+    </div>
+    <header id="header" class="header">
+        <div class="header__nav">
+            <form action="#" class="nav__search-container" id="form-searcher">
+                <button type="submit" class="search-container__submit"><i class="fas fa-search" id="searcher-submit" ></i></button>
+                <input type="text" class="search-container__input" id="searcher" autocomplete="off" value="search">
+            </form>
+            <div class="nav__user-options" id="user-options">
+                <div class="user-options__button">
+                    <i class="far fa-star" id="favourites"></i>
+                    <span>favourites</span>
+                </div>
+                <div class="user-options__button">
+                    <i class="fas fa-sign-out-alt" id="log-out"></i>
+                    <span>Log Out</span>
+                </div>
+            </div>
+            <div class="movies-result" id="movies-result">
+                <i class="fas fa-spinner"></i>
+                <div id="res" class="movies-result__res hide"></div>
+                <div id="err" class="movies-result__err hide"></div>
+            </div>     
+            <div class="header__favourites-container header__favourites-container--off" id="movies-favourites">
+                <div class="favourites-container__err">You don't have any movie in your favourites list</div>
+                <div class="favourites-container__res favourites-container__res-err--off"></div>
+            </div>
+            <button class="nav__user-button" id="user-button"></button>
+        </div>
+    </header>
+    <div id="movie-section"class="movie-section movie-section--off">
+        <div class="movie-section__movie" id="movie-section_movie">
+            <span id="movie-close" class="movie-section__close-item"><i class="fas fa-times"></i></span>
+            <img id="movie-poster"class="movie-section__movie__poster"></img>
+            <div id="movie-title"class="movie-section__movie__title"></div>
+            <div id="movie-info" class="movie-section__movie__info"></div>
+            <div id="movie-plot"class="movie-section__movie__plot"></div>
+        </div>
+    </div>
+    <main id="main" class="main"></main>
+    <aside id="aside" class="aside">
+        <!-- <img src="assets/movies-gallery2.jpg" alt="movies" class="aside__movies-img" id="aside-img"> -->
+        <div class="form-container">
+            <h1 class="form-container__title">OMDB</h1>
+            <div class="form-container__text-error" id="login-error">
+                <p></p>
+            </div>
+            <form action="#" class="login" id="login">
+                <input type="text" class="login__inputs" id="login-username" value="username" name="username" autocomplete="off">
+                <input type="text" class="login__inputs" id="login-password" value="password" name="password" autocomplete="off">
+                <button type="submit" class="login__submit" id="login-submit">Get In</button>
+                <button type="text" class="submit__loading" id="submit-loading"><i class="fas fa-spinner"></i></button>
+            </form>
+        </div>
+    </aside>
+    <footer id="footer" class="footer">
+        <p class="footer__text">© Developer Kevin Ortega</p>
+    </footer>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"> </script>
+    <script src="main.js"></script>
+</body>
+</html>
